@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>李想 · 一般路过魈上仙 · 杭电 AI 新生</title>
+  <meta name="description" content="李想的技术作品集 —— 杭州电子科技大学人工智能 2026 级，用 AI 辅助开发的折腾青年。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 纸纹颗粒（全屏覆盖） -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- 顶部固定横向跑马灯（滚动后出现，由 JS 填充内容） -->
+  <div class="top-marquee" id="topMarquee" aria-hidden="true"></div>
+
+  <!-- ============ 第一屏：Hero（巨大跑马灯背景） ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-marquee" id="heroMarquee" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="kicker">HELLO, I'M LI XIANG</p>
+      <h1 class="hero-name">李想</h1>
+      <p class="hero-slogan">爱折腾软硬件 · 爱组队协作的杭电 AI 新生</p>
+      <p class="hero-intro">用 AI 辅助开发，把想法从 0 变成能跑起来的应用。</p>
+      <div class="hero-links">
+        <a class="btn" href="https://github.com/xinl0707" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn btn-ghost" href="mailto:xinl0707@163.com">邮箱 ✉</a>
+      </div>
+      <p class="scroll-hint" aria-hidden="true">向下滚动开始 ↓</p>
+    </div>
+  </section>
+
+  <!-- ============ 第二屏：关于我 + 技术栈（合并） ============ -->
+  <section class="screen" id="about">
+    <header class="section-head reveal">
+      <span class="section-num">01</span>
+      <div>
+        <p class="kicker">ABOUT ME</p>
+        <h2 class="section-title">关于我</h2>
+      </div>
+    </header>
+
+    <div class="about-top">
+      <p class="about-text reveal reveal-left">
+        杭州电子科技大学人工智能专业 2026 级大一新生。核心是
+        <span class="mark">用 AI 辅助开发</span>——习惯用
+        <span class="mark">Claude Code</span> 完成「需求 → 开发 → 审查 → 文档」全流程，
+        独立或协作<span class="mark">从 0 构建</span>并部署了多个可运行的 Web 应用，
+        覆盖黑客松项目、个人效率工具、旅行规划、爬虫工具等场景。喜欢组队、爱折腾软硬件，做事自律、注重效率。
+      </p>
+      <dl class="id-card reveal reveal-right">
+        <div class="id-row"><dt>姓名</dt><dd>李想</dd></div>
+        <div class="id-row"><dt>网名</dt><dd>一般路过魈上仙（圈名 昕露）</dd></div>
+        <div class="id-row"><dt>身份</dt><dd>杭州电子科技大学 · 人工智能 · 2026 级</dd></div>
+        <div class="id-row"><dt>GitHub</dt><dd><a href="https://github.com/xinl0707" target="_blank" rel="noopener">github.com/xinl0707</a></dd></div>
+        <div class="id-row"><dt>邮箱</dt><dd>xinl0707@163.com</dd></div>
+        <div class="id-row"><dt>微信</dt><dd>xinl0707</dd></div>
+      </dl>
+    </div>
+
+    <div class="skills-block reveal">
+      <h3 class="skills-subhead">技术栈</h3>
+      <div class="skill-grid">
+        <div class="skill-card">
+          <span class="skill-icon">🤖</span>
+          <h4 class="skill-title">AI 辅助开发</h4>
+          <p class="skill-tag">VIBECODING</p>
+          <p class="skill-desc">用 Claude Code 完成「需求 → 编码 → 审查 → 文档」全流程，AI 辅助下独立从 0 构建并部署完整 Web 应用。</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🌐</span>
+          <h4 class="skill-title">利用 AI 的 Web 开发</h4>
+          <p class="skill-tag">FULL STACK</p>
+          <p class="skill-desc">HTML / CSS / JavaScript 前端；Node.js、Python Flask 后端；Render、Cloudflare Pages、GitHub Actions 部署。</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🧩</span>
+          <h4 class="skill-title">编程基础</h4>
+          <p class="skill-tag">C / C++ / PY</p>
+          <p class="skill-desc">C 学到指针、函数指针；了解 C++ 与 Python（主要在 AI 辅助下使用）。</p>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🔧</span>
+          <h4 class="skill-title">硬件折腾</h4>
+          <p class="skill-tag">ROOT / FLASH</p>
+          <p class="skill-desc">刷机、解 BL 锁、TWRP、Magisk + Xposed 框架；刷机翻车后用救砖模块、重刷系统自救。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 第三屏：项目经历（scrollytelling） ============ -->
+  <section class="projects" id="projects">
+    <header class="section-head reveal">
+      <span class="section-num">02</span>
+      <div>
+        <p class="kicker">PROJECTS</p>
+        <h2 class="section-title">项目经历</h2>
+      </div>
+    </header>
+
+    <!-- 项目 1：CampusVerse -->
+    <article class="project">
+      <div class="project__media">
+        <div class="project__img is-active"><img src="../assets/campusverse-home.jpeg" alt="CampusVerse 主网页"></div>
+        <div class="project__img"><img src="../assets/campusverse-simulator-start.png" alt="大学模拟器·启程"></div>
+        <div class="project__img"><img src="../assets/campusverse-mood-danmaku.png" alt="情绪地图·安慰弹幕"></div>
+        <div class="project__img"><img src="../assets/campusverse-schedule-analysis.png" alt="课表排雷·分析"></div>
+      </div>
+      <div class="project__body">
+        <div class="project__head">
+          <span class="badge">旗舰项目 · 黑客松提名</span>
+          <h3 class="project-title">CampusVerse · 双界校园</h3>
+          <p class="project-sub">未央黑客松《你好，我的大学》赛道 · 5 人团队 · 队长</p>
+        </div>
+        <div class="project__step" data-step="0">
+          <span class="step-num">01</span>
+          <p>四合一 AI 校园应用平台：用「模拟器预演大学」+「三个实用工具」，帮大学生提前试错、规划校园生活。</p>
+        </div>
+        <div class="project__step" data-step="1">
+          <span class="step-num">02</span>
+          <p>大学模拟器：四选项剧情，让你在真正进入大学前先「模拟」一遍。</p>
+        </div>
+        <div class="project__step" data-step="2">
+          <span class="step-num">03</span>
+          <p>情绪地图：校园地图标注情绪、生成情感热力图，低落时自动弹出温暖安慰弹幕。</p>
+        </div>
+        <div class="project__step" data-step="3">
+          <span class="step-num">04</span>
+          <p>课表排雷：一键识别课表图片、分析排雷。统一 <code>/api/chat</code> AI 代理，44 项冒烟测试全过。</p>
+        </div>
+        <div class="project__meta">
+          <p class="project-tech">原生 HTML/CSS/JS · Node.js 原生 http · 小米 MiMo V2.5 · Render</p>
+          <div class="project__links">
+            <a class="btn" href="https://github.com/xinl0707/campusverse" target="_blank" rel="noopener">GitHub ↗</a>
+            <a class="btn btn-ghost" href="https://campusverse-dk0n.onrender.com/" target="_blank" rel="noopener">在线演示 ↗</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 项目 2：健身记录 -->
+    <article class="project">
+      <div class="project__media">
+        <div class="project__img is-active"><img src="../assets/fitness-home.png" alt="健身记录主界面"></div>
+        <div class="project__img"><img src="../assets/fitness-food-analysis.png" alt="AI 食物分析"></div>
+        <div class="project__img"><img src="../assets/fitness-ai-summary.png" alt="AI 总结界面"></div>
+        <div class="project__img"><img src="../assets/fitness-calorie.png" alt="每日热量计算"></div>
+      </div>
+      <div class="project__body">
+        <div class="project__head">
+          <span class="badge">独立开发</span>
+          <h3 class="project-title">健身记录</h3>
+          <p class="project-sub">体重 / 饮食 / 运动 · AI 深度集成</p>
+        </div>
+        <div class="project__step" data-step="0">
+          <span class="step-num">01</span>
+          <p>记录体重、饮食热量、运动计划与打卡的健身管理工具，含体重 / BMI / 体脂趋势图。</p>
+        </div>
+        <div class="project__step" data-step="1">
+          <span class="step-num">02</span>
+          <p>AI 深度集成：拍照识别体重秤 / 小米运动截图自动录入，省去手打。</p>
+        </div>
+        <div class="project__step" data-step="2">
+          <span class="step-num">03</span>
+          <p>AI 文本分析 + SSE 流式输出，当日报告与周报自动生成。</p>
+        </div>
+        <div class="project__step" data-step="3">
+          <span class="step-num">04</span>
+          <p>每日热量计算，饮食热量可视化，帮你精细化饮食管理。</p>
+        </div>
+        <div class="project__meta">
+          <p class="project-tech">原生 HTML/CSS/JS · Node.js 本地代理 · 小米 MiMo V2.5 · localStorage + JSON 备份</p>
+          <div class="project__links">
+            <a class="btn" href="https://github.com/xinl0707/weight-tracker" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 项目 3：广州旅行（竖屏截图，完整展示） -->
+    <article class="project project--portrait">
+      <div class="project__media">
+        <div class="project__img is-active"><img src="../assets/trip-discovery.png" alt="发现界面·高德导航"></div>
+        <div class="project__img"><img src="../assets/trip-today-schedule.png" alt="今日日程"></div>
+        <div class="project__img"><img src="../assets/trip-safety.png" alt="安全预警建议"></div>
+        <div class="project__img"><img src="../assets/trip-flight.png" alt="航班倒计时"></div>
+      </div>
+      <div class="project__body">
+        <div class="project__head">
+          <span class="badge">2 人协作</span>
+          <h3 class="project-title">广州旅行规划</h3>
+          <p class="project-sub">移动端行程查看器 · 四天三晚双人游</p>
+        </div>
+        <div class="project__step" data-step="0">
+          <span class="step-num">01</span>
+          <p>2026 年 7 月广州四天三晚双人旅行的移动端行程查看器，旅途实时查看行程 / 交通 / 美食 / 费用。</p>
+        </div>
+        <div class="project__step" data-step="1">
+          <span class="step-num">02</span>
+          <p>时间线自动高亮当前活动，走到哪看到哪。</p>
+        </div>
+        <div class="project__step" data-step="2">
+          <span class="step-num">03</span>
+          <p>发现界面：景点 / 美食推荐 + 高德地图 MCP 可视化 + 地铁线路（官方配色）。</p>
+        </div>
+        <div class="project__step" data-step="3">
+          <span class="step-num">04</span>
+          <p>航班倒计时：6 阶段无缝衔接，起飞前心里有数。</p>
+        </div>
+        <div class="project__meta">
+          <p class="project-tech">原生 HTML/CSS/JS（无依赖）· 高德地图 MCP · Cloudflare Pages + GitHub Actions</p>
+          <div class="project__links">
+            <a class="btn" href="https://github.com/xinl0707/guangzhou-trip" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 项目 4：B站收藏夹 -->
+    <article class="project">
+      <div class="project__media">
+        <div class="project__img is-active"><img src="../assets/bilibili-home.png" alt="B站收藏夹主界面"></div>
+        <div class="project__img"><img src="../assets/bilibili-crawling.png" alt="爬取过程界面"></div>
+        <div class="project__img"><img src="../assets/bilibili-result.png" alt="爬取结果界面"></div>
+        <div class="project__img"><img src="../assets/bilibili-config.png" alt="配置界面"></div>
+      </div>
+      <div class="project__body">
+        <div class="project__head">
+          <span class="badge">独立开发</span>
+          <h3 class="project-title">B站收藏夹工具</h3>
+          <p class="project-sub">Python + Flask · 爬取与可视化浏览</p>
+        </div>
+        <div class="project__step" data-step="0">
+          <span class="step-num">01</span>
+          <p>B 站个人收藏夹爬取与可视化浏览工具，一键爬取全部收藏夹。</p>
+        </div>
+        <div class="project__step" data-step="1">
+          <span class="step-num">02</span>
+          <p>多线程爬取视频标题 / UP 主 / 播放量 / 收藏量 / 弹幕数 / 时长，并下载封面与头像。</p>
+        </div>
+        <div class="project__step" data-step="2">
+          <span class="step-num">03</span>
+          <p>网页端浏览、搜索、排序、筛选，学习精选自动识别。</p>
+        </div>
+        <div class="project__step" data-step="3">
+          <span class="step-num">04</span>
+          <p>Excel 导出三种报表 · 多快照管理 · 智能错误诊断。</p>
+        </div>
+        <div class="project__meta">
+          <p class="project-tech">Python · Flask · requests · openpyxl · Pillow</p>
+          <div class="project__links">
+            <a class="btn" href="https://github.com/xinl0707/bilibili-favorites-tool" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ============ 结尾：教育背景 + 个人特点 ============ -->
+  <section class="screen ending" id="ending">
+    <header class="section-head reveal">
+      <span class="section-num">03</span>
+      <div>
+        <p class="kicker">MORE ABOUT ME</p>
+        <h2 class="section-title">教育与特点</h2>
+      </div>
+    </header>
+    <div class="ending-grid">
+      <div class="timeline reveal reveal-left">
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <span class="timeline-num">01</span>
+            <div>
+              <h3 class="timeline-title">杭州第四中学</h3>
+              <p class="timeline-sub">选科 物理 / 化学 / 生物 · 2026 届</p>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-num">02</span>
+            <div>
+              <h3 class="timeline-title">杭州电子科技大学</h3>
+              <p class="timeline-sub">人工智能专业 · 2026 级（大一绍兴校区，后转下沙）</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="hl-grid reveal reveal-right">
+        <div class="hl-card"><h3>用 AI 高效交付</h3><p>用 AI 工具从想法快速做出可用原型（4 个实际项目）。</p></div>
+        <div class="hl-card"><h3>团队协作</h3><p>担任黑客松队长，负责统筹、代码合并与多人协调。</p></div>
+        <div class="hl-card"><h3>动手折腾</h3><p>软硬件都爱折腾（Web 开发 + 刷机救砖）。</p></div>
+        <div class="hl-card"><h3>自律规划</h3><p>坚持健身减脂、精细化饮食管理，习惯记录生活与项目进度。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="footer">
+    <p class="footer-line">© 2026 李想 · 用 AI 把想法变成现实</p>
+    <p class="footer-nick">一般路过魈上仙 ✦ xinl0707</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
