@@ -2,7 +2,7 @@
 
 > 深色 scrollytelling（滚动叙事）技术作品集 —— 纯静态 HTML / CSS / JS，无框架、无构建。
 
-**在线访问：** Cloudflare Pages（部署后见仓库 Pages 地址）
+**在线访问：** https://xinl0707.github.io/about-me/
 
 ## 内容
 
