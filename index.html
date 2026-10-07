@@ -5,15 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>李想 · 一般路过魈上仙 · 杭电 AI 新生</title>
   <meta name="description" content="李想的技术作品集 —— 杭州电子科技大学人工智能 2026 级，用 AI 辅助开发的折腾青年。">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍎</text></svg>">
   <link rel="stylesheet" href="style.css">
+  <!-- 提前打 JS 标记，避免渐入动画闪一下（FOUC） -->
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
+
+  <!-- 顶部滚动进度条（Apple Action Blue 单色） -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
   <!-- 纸纹颗粒（全屏覆盖） -->
   <div class="grain" aria-hidden="true"></div>
 
   <!-- 顶部固定横向跑马灯（滚动后出现，由 JS 填充内容） -->
   <div class="top-marquee" id="topMarquee" aria-hidden="true"></div>
+
+  <!-- 品类 sub-nav：毛玻璃吸顶，Apple 两段式导航的第二行（锚点 + 联系 CTA） -->
+  <div class="sub-nav" id="subNav">
+    <span class="sub-nav__title">李想 · 作品集</span>
+    <nav class="sub-nav__links" aria-label="章节导航">
+      <a href="#about">关于</a>
+      <a href="#projects">项目</a>
+      <a href="#quote">理念</a>
+      <a href="#ending">教育</a>
+      <a class="sub-nav__cta" href="mailto:xinl0707@163.com">联系我</a>
+    </nav>
+  </div>
 
   <!-- ============ 第一屏：Hero（巨大跑马灯背景） ============ -->
   <section class="hero" id="hero">
@@ -42,21 +61,54 @@
     </header>
 
     <div class="about-top">
-      <p class="about-text reveal reveal-left">
-        杭州电子科技大学人工智能专业 2026 级大一新生。核心是
-        <span class="mark">用 AI 辅助开发</span>——习惯用
-        <span class="mark">Claude Code</span> 完成「需求 → 开发 → 审查 → 文档」全流程，
-        独立或协作<span class="mark">从 0 构建</span>并部署了多个可运行的 Web 应用，
-        覆盖黑客松项目、个人效率工具、旅行规划、爬虫工具等场景。喜欢组队、爱折腾软硬件，做事自律、注重效率。
-      </p>
-      <dl class="id-card reveal reveal-right">
-        <div class="id-row"><dt>姓名</dt><dd>李想</dd></div>
-        <div class="id-row"><dt>网名</dt><dd>一般路过魈上仙（圈名 昕露）</dd></div>
-        <div class="id-row"><dt>身份</dt><dd>杭州电子科技大学 · 人工智能 · 2026 级</dd></div>
-        <div class="id-row"><dt>GitHub</dt><dd><a href="https://github.com/xinl0707" target="_blank" rel="noopener">github.com/xinl0707</a></dd></div>
-        <div class="id-row"><dt>邮箱</dt><dd>xinl0707@163.com</dd></div>
-        <div class="id-row"><dt>微信</dt><dd>xinl0707</dd></div>
-      </dl>
+      <div class="about-col reveal reveal-left">
+        <!-- 层 1：身份 -->
+        <p class="about-role">杭州电子科技大学 · 人工智能专业 · 2026 级大一新生</p>
+
+        <!-- 层 2：主张 -->
+        <p class="about-claim">核心是 <span class="mark">用 AI 辅助开发</span></p>
+
+        <!-- 层 3：流程链 -->
+        <div class="about-block">
+          <p class="about-label">工作流 · CLAUDE CODE</p>
+          <p class="about-flow">
+            <span>需求</span><span class="flow-sep">›</span>
+            <span>开发</span><span class="flow-sep">›</span>
+            <span>审查</span><span class="flow-sep">›</span>
+            <span>文档</span>
+          </p>
+        </div>
+
+        <!-- 层 4：交付 / 场景 -->
+        <div class="about-points">
+          <div class="about-point">
+            <span class="about-tag">交付</span>
+            <p>独立或协作 <span class="mark">从 0 构建</span> 并部署了多个可运行的 Web 应用</p>
+          </div>
+          <div class="about-point">
+            <span class="about-tag">场景</span>
+            <p>黑客松项目 · 个人效率工具 · 旅行规划 · 爬虫工具</p>
+          </div>
+        </div>
+
+        <!-- 层 5：收尾 -->
+        <p class="about-close">喜欢组队、爱折腾软硬件，做事自律、注重效率</p>
+      </div>
+      <div class="id-card reveal reveal-right">
+        <div class="id-head">
+          <img class="id-avatar" src="assets/avatar.webp" alt="李想头像" loading="lazy" decoding="async">
+          <div>
+            <p class="id-name">李想</p>
+            <p class="id-nick">一般路过魈上仙 · 昕露</p>
+          </div>
+        </div>
+        <dl class="id-list">
+          <div class="id-row"><dt>身份</dt><dd>杭州电子科技大学 · 人工智能 · 2026 级</dd></div>
+          <div class="id-row"><dt>GitHub</dt><dd><a href="https://github.com/xinl0707" target="_blank" rel="noopener">github.com/xinl0707</a></dd></div>
+          <div class="id-row"><dt>邮箱</dt><dd>xinl0707@163.com</dd></div>
+          <div class="id-row"><dt>微信</dt><dd>xinl0707</dd></div>
+        </dl>
+      </div>
     </div>
 
     <div class="skills-block reveal">
@@ -90,6 +142,28 @@
     </div>
   </section>
 
+  <!-- ============ 数据成就带（大数字 + count-up） ============ -->
+  <section class="stats" id="stats" aria-label="数据亮点">
+    <div class="stats-grid reveal">
+      <div class="stat">
+        <span class="stat-num" data-count="4">4</span>
+        <span class="stat-label">个上线项目</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-count="1">1</span>
+        <span class="stat-label">场黑客松获赛道提名</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-count="5">5</span>
+        <span class="stat-label">人黑客松团队 · 队长</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" data-count="3">3</span>
+        <span class="stat-label">个部署平台</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ 第三屏：项目经历（scrollytelling） ============ -->
   <section class="projects" id="projects">
     <header class="section-head reveal">
@@ -103,10 +177,10 @@
     <!-- 项目 1：CampusVerse -->
     <article class="project">
       <div class="project__media">
-        <div class="project__img is-active"><img src="assets/campusverse-home.jpeg" alt="CampusVerse 主网页"></div>
-        <div class="project__img"><img src="assets/campusverse-simulator-start.png" alt="大学模拟器·启程"></div>
-        <div class="project__img"><img src="assets/campusverse-mood-danmaku.png" alt="情绪地图·安慰弹幕"></div>
-        <div class="project__img"><img src="assets/campusverse-schedule-analysis.png" alt="课表排雷·分析"></div>
+        <div class="project__img is-active project__img--fill"><img loading="lazy" decoding="async" src="assets/campusverse-home.webp" alt="CampusVerse 主网页"></div>
+        <div class="project__img"><img loading="lazy" decoding="async" src="assets/campusverse-simulator-start.webp" alt="大学模拟器·启程"></div>
+        <div class="project__img"><img loading="lazy" decoding="async" src="assets/campusverse-mood-danmaku.webp" alt="情绪地图·安慰弹幕"></div>
+        <div class="project__img"><img loading="lazy" decoding="async" src="assets/campusverse-schedule-analysis.webp" alt="课表排雷·分析"></div>
       </div>
       <div class="project__body">
         <div class="project__head">
@@ -143,10 +217,10 @@
     <!-- 项目 2：健身记录 -->
     <article class="project">
       <div class="project__media">
-        <div class="project__img is-active"><img src="assets/fitness-home.png" alt="健身记录主界面"></div>
-        <div class="project__img"><img src="assets/fitness-food-analysis.png" alt="AI 食物分析"></div>
-        <div class="project__img"><img src="assets/fitness-ai-summary.png" alt="AI 总结界面"></div>
-        <div class="project__img"><img src="assets/fitness-calorie.png" alt="每日热量计算"></div>
+        <div class="project__img is-active"><img loading="lazy" decoding="async" src="assets/fitness-home.webp" alt="健身记录主界面"></div>
+        <div class="project__img"><img loading="lazy" decoding="async" src="assets/fitness-food-analysis.webp" alt="AI 食物分析"></div>
+        <div class="project__img"><img loading="lazy" decoding="async" src="assets/fitness-ai-summary.webp" alt="AI 总结界面"></div>
+        <div class="project__img"><img loading="lazy" decoding="async" src="assets/fitness-calorie.webp" alt="每日热量计算"></div>
       </div>
       <div class="project__body">
         <div class="project__head">
@@ -182,10 +256,10 @@
     <!-- 项目 3：广州旅行（竖屏截图，完整展示） -->
     <article class="project project--portrait">
       <div class="project__media">
-        <div class="project__img is-active"><img src="assets/trip-discovery.png" alt="发现界面·高德导航"></div>
-        <div class="project__img"><img src="assets/trip-today-schedule.png" alt="今日日程"></div>
-        <div class="project__img"><img src="assets/trip-safety.png" alt="安全预警建议"></div>
-        <div class="project__img"><img src="assets/trip-flight.png" alt="航班倒计时"></div>
+        <div class="project__img is-active"><img loading="lazy" decoding="async" src="assets/trip-discovery.webp" alt="发现界面·高德导航"></div>
+        <div class="project__img"><img loading="lazy" decoding="async" src="assets/trip-today-schedule.webp" alt="今日日程"></div>
+        <div class="project__img"><img loading="lazy" decoding="async" src="assets/trip-safety.webp" alt="安全预警建议"></div>
+        <div class="project__img"><img loading="lazy" decoding="async" src="assets/trip-flight.webp" alt="航班倒计时"></div>
       </div>
       <div class="project__body">
         <div class="project__head">
@@ -221,10 +295,10 @@
     <!-- 项目 4：B站收藏夹 -->
     <article class="project">
       <div class="project__media">
-        <div class="project__img is-active"><img src="assets/bilibili-home.png" alt="B站收藏夹主界面"></div>
-        <div class="project__img"><img src="assets/bilibili-crawling.png" alt="爬取过程界面"></div>
-        <div class="project__img"><img src="assets/bilibili-result.png" alt="爬取结果界面"></div>
-        <div class="project__img"><img src="assets/bilibili-config.png" alt="配置界面"></div>
+        <div class="project__img is-active"><img loading="lazy" decoding="async" src="assets/bilibili-home.webp" alt="B站收藏夹主界面"></div>
+        <div class="project__img"><img loading="lazy" decoding="async" src="assets/bilibili-crawling.webp" alt="爬取过程界面"></div>
+        <div class="project__img"><img loading="lazy" decoding="async" src="assets/bilibili-result.webp" alt="爬取结果界面"></div>
+        <div class="project__img"><img loading="lazy" decoding="async" src="assets/bilibili-config.webp" alt="配置界面"></div>
       </div>
       <div class="project__body">
         <div class="project__head">
@@ -256,6 +330,15 @@
         </div>
       </div>
     </article>
+  </section>
+
+  <!-- ============ 深色金句瓷砖（明暗节奏 + 单一蓝 CTA） ============ -->
+  <section class="quote-tile" id="quote">
+    <div class="quote-inner reveal">
+      <p class="kicker quote-kicker">MY MOTTO</p>
+      <blockquote class="quote-text">用 AI 把想法，从 0 变成能跑起来的应用。</blockquote>
+      <a class="btn" href="mailto:xinl0707@163.com">一起做点东西 ✉</a>
+    </div>
   </section>
 
   <!-- ============ 结尾：教育背景 + 个人特点 ============ -->
